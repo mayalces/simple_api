@@ -1,24 +1,24 @@
-# README
+# Simple API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple API interacts with [GNews API](https://gnews.io/) for fetching articles.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+* Clone the repository from [Simple API Repo](git@github.com:mayalces/simple_api.git)
+* Configure the API key for `GNews API` in `.env.development` file
+* Execute
 
-* System dependencies
+```
+    $ bundle install
+    $ rails s
+```
 
-* Configuration
+## Usage
 
-* Database creation
+```
+    $ curl http://127.0.0.1:3000/api/v1/articles
+```
 
-* Database initialization
+## Contributing
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Create a branch in the `upstream` repo and submit a `pull request`, please.
