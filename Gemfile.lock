@@ -66,10 +66,17 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    addressable (2.8.4)
+      public_suffix (>= 2.0.2, < 6.0)
+    apipie-rails (1.0.0)
+      actionpack (>= 5.0)
+      activesupport (>= 5.0)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
     builder (3.2.4)
     concurrent-ruby (1.2.2)
+    crack (0.4.5)
+      rexml
     crass (1.0.6)
     date (3.3.3)
     debug (1.7.2)
@@ -91,6 +98,7 @@ GEM
     ffaker (2.21.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    hashdiff (1.0.1)
     http-accept (1.7.0)
     http-cookie (1.0.5)
       domain_name (~> 0.5)
@@ -128,6 +136,7 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.14.3-x86_64-darwin)
       racc (~> 1.4)
+    public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.2)
@@ -170,6 +179,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    rexml (3.2.5)
     rspec-core (3.12.2)
       rspec-support (~> 3.12.0)
     rspec-expectations (3.12.3)
@@ -195,6 +205,10 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
+    webmock (3.18.1)
+      addressable (>= 2.8.0)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -204,6 +218,7 @@ PLATFORMS
   x86_64-darwin-22
 
 DEPENDENCIES
+  apipie-rails
   bootsnap
   debug
   dotenv-rails
@@ -216,6 +231,7 @@ DEPENDENCIES
   rspec-rails
   sqlite3 (~> 1.4)
   tzinfo-data
+  webmock
 
 RUBY VERSION
    ruby 3.1.2p20
