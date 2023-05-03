@@ -5,9 +5,9 @@ class Api::V1::ArticlesController < ApplicationController
   before_action :validate_category!, if: -> { params[:category].present? }
 
   api :GET, '/v1/articles/', 'List of Articles'
-  param :keyword, String, desc: 'This parameter allows you to specify your search keywords to find the news articles you are looking for. If category provided then keyword is not needed.', :required => true
-  param :category, String, desc: 'This parameter allows you to change the category for the request. The available categories are : general, world, nation, business, technology, entertainment, sports, science and health. If keyword provided then category is not needed', :required => true
-  param :max_records, Integer, desc: 'This parameter allows you to specify the number of news articles returned by the API'
+  param :keyword, String, desc: 'This parameter allows you to specify your search keywords to find the news articles you are looking for. If category provided then keyword is not needed.'
+  param :category, String, desc: 'This parameter allows you to change the category for the request. The available categories are : general, world, nation, business, technology, entertainment, sports, science and health. If keyword provided then category is not needed'
+  param :max_records, String, desc: 'This parameter allows you to specify the number of news articles returned by the API'
   returns :code => 200, :desc => "the list of articles" do
     property :totalArticles, Integer, desc: "Total articles matching the query"
     property :articles, Array, dess: "The list of articles" do
